@@ -1,13 +1,63 @@
 
+nav {
+    font-family: helvetica;
+    text-transform: none;
+    background-color: #C12127;
+    color: rgb(255, 255, 255, 0.9);
+    padding-top: 10px;
+    line-height:1.15;
+    padding-bottom: 10px;
+    font-weight: lighter;
+    font-size: 90%;
+  }
+  
+  nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+  }
+
+  .top-links {
+    display: inline-block;
+    float: right;
+    padding: 0;
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+  }
+  
+  .top-links li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+
+  .header-main {
+    background: url(../Clone-Project/images/Background1.svg) fixed;
+    background-size: cover;
+}
+
+
+
+
+
+  .container {
+      width: 0 auto;
+      margin: 0 auto;
+
+  }
+
+
 #Section1 {
-    background-image: url(/Clone-Project/images/Background1.svg)
+    background-image: url(../Clone-Project/images/Background2.svg);
+    background-repeat: no-repeat;
+   
 }
 
 #Section2 {
-    background-image: url(/Clone-Project/images/Background2.svg)
+    background-image: url(../Clone-Project/images/Background3.svg);
+    background-repeat: no-repeat; 
 }
 
 #Section3 {
-    background-image: url(/Clone-Project/images/Background3.svg)
+   
 }
 
