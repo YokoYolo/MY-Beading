@@ -1,0 +1,36 @@
+<h1>Login</h1>
+
+
+<form id="form" action="/login" method="post">
+
+    <label for="username">Username</label>
+    <input type="text" name="username">
+
+    <label for="password">Password</label>
+    <input type="password" name="password">
+
+    {{#if message }}
+    <div class="message">{{ message }}</div>
+    {{/if}}
+    
+    <button type="submit">Log in</button>
+    {{!-- <div>
+    <input type="submit" value="Log In">
+    </div> --}}
+
+    <a href="/login/facebook">Login With Facebook</a><br>
+    <a href="/login/google">Sign In with Google</a>
+
+     <a href="/signup">Create account </a>
+
+
+
+</form>
+
+
+
+
+
+
+
+

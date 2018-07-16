@@ -1,0 +1,40 @@
+
+
+<div><img class="itemImageFull" src="{{item.image}}"></div>
+
+<br>
+
+<h1>{{item.title}}</h1>
+<h4>price: {{item.price}}</h4>
+
+<p>{{item.description}}</p>
+
+<hr>
+
+<a href="/gallery/{{item.id}}/reviews/new">Add a Review</a>
+
+<hr>
+
+{{#each item.reviews}}
+    <h4>{{this.title}}</h4>
+    <h4>{{this.reviewer}}</h4>
+    <p>{{this.content}}</p>
+
+    <form action="/gallery/{{../item.id}}/reviews/{{this.id}}/delete" method="post">
+    <button>delete</button>
+    </form>
+
+<p><button onclick = "location.href='/gallery/{{../movie.id}}/reviews/{{@index}}/editReview'")> 
+Edit This Review </button></p>
+
+    <hr>
+{{/each}}
+
+
+
+
+
+</div>
+
+</div>
+
