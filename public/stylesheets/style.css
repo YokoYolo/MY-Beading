@@ -16,21 +16,26 @@
   padding-right: 100px;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: palevioletred; }
+  background-color: white; }
 
 .navigation li {
   list-style-type: none; }
 
 .navigation li a {
-  color: #a1e8f9; }
+  color: palevioletred;
+  text-decoration: none; }
 
-.navigation li.selected a {
-  background: none repeat scroll 0 0 palevioletred;
+.navigation li a.selected {
+  background: none repeat scroll 0 0 grey;
   text-decoration: none; }
 
 .logo {
   height: 70px;
   padding-left: 50px; }
+
+.navbutton {
+  background-color: transparent;
+  color: palevioletred; }
 
 #form {
   margin: 30px auto;
@@ -92,6 +97,10 @@
   width: 320px;
   height: 300px; }
 
+.itemImageFull {
+  width: 620px;
+  height: 600px; }
+
 footer {
   background-color: #2d354d;
   color: white; }
@@ -107,5 +116,7 @@ footer ul li {
   display: flex;
   justify-content: space-evenly;
   padding-right: 60px; }
+
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

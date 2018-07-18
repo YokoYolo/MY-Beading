@@ -83,7 +83,7 @@ passport.deserializeUser((id, cb) => {
 app.use(flash());
 
 
-passport.use(new LocalStrategy((username, email, password, next) => {
+passport.use(new LocalStrategy((username, password, next) => {
   User.findOne({username}, (err, user) => {
     if (err) {
       return next(err);

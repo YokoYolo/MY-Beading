@@ -2,8 +2,7 @@ const express      = require('express');
 const itemReviewRouter   = express.Router();
 const Item       = require('../models/item');
 const User       = require('../models/user');
-const bcrypt       = require('bcryptjs');
-const passport     = require('passport');
+
 
 
 // create review
@@ -30,7 +29,7 @@ itemReviewRouter.post('/gallery/:id/reviews/create', (req, res, next) =>{
 
 // delete review
 itemReviewRouter.post('/gallery/:id/reviews/:reviewId/delete', (req, res, next)=>{
-    const movieId = req.params.id;
+    const itemId = req.params.id;
     const reviewId = req.params.reviewId;
     Item.findById(itemId)
      .then((theItem) =>{

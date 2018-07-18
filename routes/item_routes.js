@@ -16,11 +16,11 @@ itemRouter.get('/gallery', (req, res, next)=>{
 })
 
 
-itemRouter.get('/gallery/:itemId', (req, res, next)=>{
-    const itemId = req.params.id
-    Item.findById(itemId)
+itemRouter.get('/gallery/:id', (req, res, next)=>{
+    const id = req.params.id
+    Item.findById(id)
     .then((theItem)=>{
-        res.render('item/item', {item: theItem})
+        res.render('item/item', {item: theItem, theUser: req.user})
     })
     .catch((err)=>{
         res.send(err);
