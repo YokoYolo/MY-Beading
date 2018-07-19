@@ -11,7 +11,7 @@ itemRouter.get('/gallery', (req, res, next)=>{
     res.render('item/items_list', {itemsArray: listOfItems, theUser: req.user});
     })
     .catch((err)=>{
-        res.send(err);
+        next(err);
     })
 })
 
@@ -20,10 +20,18 @@ itemRouter.get('/gallery/:id', (req, res, next)=>{
     const id = req.params.id
     Item.findById(id)
     .then((theItem)=>{
+        theItem.reviews.forEach(oneReview => {
+            if (oneReview.reviewer.equals(req.user.id)) {
+                oneReview.mine = true;
+            } 
+        });
+
+
+
         res.render('item/item', {item: theItem, theUser: req.user})
     })
     .catch((err)=>{
-        res.send(err);
+        next(err);
     })
 
 });

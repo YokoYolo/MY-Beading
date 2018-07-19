@@ -4,7 +4,7 @@ const User         = require('../models/user');
 const bcrypt       = require('bcryptjs');
 const passport     = require('passport');
 const ensureLogin = require("connect-ensure-login")
-
+const uploadCloud = require("../config/cloudinary")
 
 
 
@@ -14,9 +14,13 @@ userRouter.get('/signup', (req, res, next)=>{
     res.render('user/create_acc');
 })
 
-userRouter.post('/signup', (req, res, next)=>{
+userRouter.post('/signup', uploadCloud.single('theImage'), (req, res, next)=>{
     const thePassword = req.body.thePassword;
     const theUsername = req.body.theUsername;
+    const theEmail = req.body.theEmail;
+    const theName = req.body.theName;
+    const theLastName = req.body.theLastName;
+    const theImage = req.file.url;
     if(thePassword === "" || theUsername === ""){
         res.render('user/create_acc', {errorMessage: 'Please fill in both a username and password in order to create an account'})
         return;
@@ -29,7 +33,7 @@ userRouter.post('/signup', (req, res, next)=>{
         } 
             const salt     = bcrypt.genSaltSync(10);
             const hashedPassword = bcrypt.hashSync(thePassword, salt);
-            User.create({username: theUsername, password: hashedPassword})
+            User.create({username: theUsername, password: hashedPassword, email: theEmail, name: theName, lastname: theLastName, image: theImage })
             .then((response)=>{
                 res.redirect('/');
             })
@@ -38,14 +42,15 @@ userRouter.post('/signup', (req, res, next)=>{
             })
     }) 
 
-
 }); 
 
 userRouter.get('/login', (req, res, next)=>{
     res.render('user/login_acc', { message: req.flash("error") });
 });
 
-userRouter.post("/login", passport.authenticate("local", {
+
+// userRouter.post("/login", passport.authenticate("local", {
+userRouter.post("/login", passport.createStrategy("local", {
     successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true,
@@ -53,19 +58,19 @@ userRouter.post("/login", passport.authenticate("local", {
   }));
 
 
-userRouter.get("/login/facebook", passport.authenticate("facebook"));
-userRouter.get("/login/facebook/callback", passport.authenticate("facebook", {
-    successRedirect: "/user/private",
-    failureRedirect: "/login"
-  }));
+// userRouter.get("/login/facebook", passport.authenticate("facebook"));
+// userRouter.get("/login/facebook/callback", passport.authenticate("facebook", {
+//     successRedirect: "/user/private",
+//     failureRedirect: "/login"
+//   }));
 
-userRouter.get('/login/google',
-    passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' }),
-userRouter.get('/login/google/callback', 
-    passport.authenticate('google', { failureRedirect: '/login' }),
-     function(req, res) {
-    res.redirect('/user/private');
-  }));
+// userRouter.get('/login/google',
+//     passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' }),
+// userRouter.get('/login/google/callback', 
+//     passport.authenticate('google', { failureRedirect: '/login' }),
+//      function(req, res) {
+//     res.redirect('/user/private');
+//   }));
 
 ensureLogin.ensureLoggedIn()
 

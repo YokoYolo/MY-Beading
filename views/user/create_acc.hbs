@@ -1,14 +1,24 @@
 <h1>Signup</h1>
 
-<form action="/signup" method="post">
+<form action="/signup" method="post" enctype="multipart/form-data">
 
     <label for="username">Username</label>
     <input id="username" type="text" name="theUsername">
 
     <label for="password">password</label>
     <input id="password" name="thePassword" type="password">
+    
+    <label for="email">Email</label>
+    <input id="email" name="theEmail" type="email">
+    
+    <label for="name">Name</label>
+    <input id="name" name="theName" type="name">
+    
+    <label for="lastname"> Last Name</label>
+    <input id="lastname" name="theLastName" type="lastname">
 
-
+    <input type="file" name="theImage" id="image">
+    
     <button>Submit</button>
 
 </form>

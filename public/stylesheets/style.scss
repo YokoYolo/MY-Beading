@@ -43,7 +43,35 @@
 .navbutton {
   background-color: transparent;
   color:palevioletred;
+  border: none;
 }
+
+footer {
+  background-color: #2d354d;
+  color: white; 
+}
+
+footer ul {
+  list-style-type: none; 
+}
+
+footer ul li {
+  padding: 5px; 
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: white; 
+}
+
+.footer-top {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 60px; 
+}
+
+/*# sourceMappingURL=style.css.map */
 
 // ==========================================================================
 
@@ -112,21 +140,3 @@
 .itemImageFull {
   width: 620px;
   height: 600px; }
-
-footer {
-  background-color: #2d354d;
-  color: white; }
-
-footer ul {
-  list-style-type: none; }
-
-footer ul li {
-  padding: .5em; }
-
-.footer-top {
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-evenly;
-  padding-right: 60px; }
-
-/*# sourceMappingURL=style.css.map */

@@ -83,13 +83,13 @@ passport.deserializeUser((id, cb) => {
 app.use(flash());
 
 
-passport.use(new LocalStrategy((username, password, next) => {
-  User.findOne({username}, (err, user) => {
+passport.use(new LocalStrategy((username, password, email, next) => {
+  User.findOne({username} || {email}, (err, user) => {
     if (err) {
       return next(err);
     }
-    if (!user) {
-      return next(null, false, { message: "Incorrect username" });
+    if (!user || !email) {
+      return next(null, false, { message: "Incorrect username or email" });
     }
     if (!bcrypt.compareSync(password, user.password)) {
       return next(null, false, { message: "Incorrect password" });

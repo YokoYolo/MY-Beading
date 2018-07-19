@@ -11,8 +11,9 @@
 
 <hr>
 
+{{#if theUser}}
 <a href="/gallery/{{item.id}}/reviews/new">Add a Review</a>
-
+{{/if}}
 <hr>
 
 {{#each item.reviews}}
@@ -20,12 +21,20 @@
     <h4>{{this.reviewer}}</h4>
     <p>{{this.content}}</p>
 
-    <form action="/gallery/{{../item.id}}/reviews/{{this.id}}/delete" method="post">
-    <button>delete</button>
-    </form>
 
-<p><button onclick = "location.href='/gallery/{{../movie.id}}/reviews/{{@index}}/editReview'")> 
+
+{{#if this.mine}}
+<form action="/gallery/{{../item.id}}/reviews/{{@index}}/delete" method="post">
+<button>delete</button>
+</form>
+
+<p><button onclick = "location.href='/gallery/{{../item.id}}/reviews/{{@index}}/edit'")> 
 Edit This Review </button></p>
+{{/if}}
+
 
     <hr>
 {{/each}}
+
+
+

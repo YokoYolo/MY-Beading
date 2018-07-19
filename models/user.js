@@ -1,21 +1,24 @@
 const mongoose = require('mongoose');
-const Schema   = mongoose.Schema;
-
+const Schema   = mongoose.Schema
+,passportEmail = require('passport-email')
+      ;
 
 const userSchema = new Schema({
     username: String,
     password: String,
     name: String,
-    surname: String,
+    lastname: String,
     email: String,
-    facebookID: String,
-    googleID: String,
+    // facebookID: String,
+    // googleID: String,
     image: String,},
     {timestamps: true}
   );
 
 
   const User = mongoose.model("User", userSchema);
+  
+  User.plugin(passportEmail);
 
   module.exports = User;
 

@@ -1,6 +1,8 @@
 {{item.title}}
+<h2>Edit this Review</h2>
 
-<form action="/gallery/{{item.id}}/reviews/create" method="post">
+
+<form action="/gallery/{{item.id}}/reviews/{{ri}}/update" method="post">
 
     <div>{{theUser.username}}</div>
     <input for="title" name="title">Title</input><br>
