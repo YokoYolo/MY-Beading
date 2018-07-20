@@ -19,7 +19,7 @@
   border-bottom-color: #867f7f;
   color: #5b5e6d;
   width: 100%;
-  padding-left: 50px;
+  padding-left: 20px;
   padding-right: 100px;
   text-decoration: none;
   text-transform: uppercase;
@@ -66,7 +66,8 @@
 
 footer {
   background-color: #2d354d;
-  color: white; }
+  color: white;
+  width: 100%; }
 
 footer ul {
   list-style-type: none; }
@@ -89,7 +90,9 @@ footer ul li a {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
   background-size: cover;
   height: 1000px;
-  margin: 0 0; }
+  margin: 0 0;
+  position: fixed;
+  width: 100%; }
 
 .bodyimage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
