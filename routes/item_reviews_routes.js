@@ -2,9 +2,9 @@ const express      = require('express');
 const itemReviewRouter   = express.Router();
 const Item       = require('../models/item');
 const User       = require('../models/user');
-const bcrypt       = require('bcryptjs');
-const passport     = require('passport');
-const ensureLogin = require("connect-ensure-login")
+// const bcrypt       = require('bcryptjs');
+// const passport     = require('passport');
+// const ensureLogin = require("connect-ensure-login")
 
 // create review
 itemReviewRouter.get ('/gallery/:id/reviews/new', (req, res, next)=>{
