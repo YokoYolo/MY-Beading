@@ -22,16 +22,19 @@ const GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
 const Item         = require('./models/item');
 const User         = require('./models/user');
 
+// res.render("site/index", { apiKey: "AIzaSyCTxsFM2Bbm4KEtuFAmdu11WF3s3zUliwU" });
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/miss-yoko-beading', {useMongoClient: true})
+  .connect(process.env.MONGODB_URI, {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
     console.error('Error connecting to mongo', err)
   });
 
+
+  // mongodb://localhost/miss-yoko-beading
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
@@ -164,6 +167,9 @@ passport.use(new FbStrategy({
   });
 
 }));
+
+
+
 
 app.use(passport.initialize());
 app.use(passport.session());

@@ -1,3 +1,5 @@
+
+
 <div class="wrapper">
 
 <div>
@@ -5,40 +7,54 @@
         <div><img class="itemImageFull" src="{{item.image}}"></div>
 
 
+<div class="container3 cent">
+
+        <div>
         <h1>{{item.title}}</h1>
-        <h4>price: ${{item.price}}</h4>
+        <h6>price: ${{item.price}}</h6>
 
         <p>{{item.description}}</p>
-        <hr>
-
-
+        </div>
 </div>
-</div>
-<hr>
-
+    
+<div class="addReviewButton2">
 {{#if theUser}}
-<a href="/gallery/{{item.id}}/reviews/new" class="addReviewButton">Add a Review</a>
+<a href="/gallery/{{item.id}}/reviews/new" class="addReviewButton leftfl">Add a Review</a>
 {{/if}}
 
 
+</div>
+</div>
+</div>
+
+<hr>
+<br>
+<div class="container2">
+
+<div class="cont2">
 {{#each item.reviews}}
-    <h5>{{this.title}}</h5>
-    <h6>by: {{this.reviewer.username}}</h6>
-    <p>{{this.content}}</p>
+<div>
+    <span>{{this.title}}</span><br>
+    <span>by: {{this.reviewer.username}}</span><br>
+    <span class="reviewtext">{{this.content}}</span>
 
 
 
+<br>
 {{#if this.mine}}
 <form action="/gallery/{{../item.id}}/reviews/{{@index}}/delete" method="post">
-<button>delete</button>
+<button class=" addReviewButton leftfl">delete</button>
 </form>
-
-<p><button onclick = "location.href='/gallery/{{../item.id}}/reviews/{{@index}}/edit'")> 
-Edit This Review </button></p>
+<br>
+<div class="space2"><button class="addReviewButton leftfl" onclick = "location.href='/gallery/{{../item.id}}/reviews/{{@index}}/edit'")> 
+Edit This Review </button></div>
 {{/if}}
-
-
-    <hr>
+</div>
+<div class="space"></div>
+<hr>
 {{/each}}
+</div>
+</div>
 
-
+</div>
+<div class="space"></div>

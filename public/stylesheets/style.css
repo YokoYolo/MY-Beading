@@ -84,7 +84,7 @@ footer ul li a {
 .indexpage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
   background-size: cover;
-  height: 500px; }
+  height: 1000px; }
 
 .bodyimage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
@@ -104,6 +104,37 @@ footer ul li a {
   align-items: center;
   color: lightslategray; }
 
+.container2 {
+  display: flex;
+  border: solid .4px black;
+  background-color: white;
+  border-radius: 40px;
+  padding: 30px;
+  margin: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  color: lightslategray;
+  font-size: 13px; }
+
+.container3 {
+  margin: auto;
+  width: 50%;
+  border: solid .4px black;
+  background-color: white;
+  border-radius: 40px;
+  padding: 30px;
+  text-align: left;
+  color: lightslategray;
+  width: 500px;
+  margin-top: 30px; }
+
+.cent {
+  align-content: center;
+  align-items: center; }
+
+.cont2 {
+  width: 1200px; }
+
 .indexpage h1 {
   color: #43a3e6;
   text-align: center;
@@ -121,6 +152,15 @@ footer ul li a {
   max-width: 600px;
   max-height: 400px;
   align-content: center; }
+
+.container3 h1 {
+  color: #43a3e6;
+  text-align: center;
+  font-family: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"; }
+
+.container3 h6 {
+  color: #43a3e6;
+  text-align: center; }
 
 #form {
   margin: 30px auto;
@@ -189,6 +229,11 @@ footer ul li a {
   text-decoration: none;
   color: black; }
 
+.itemImagesmall {
+  border-radius: 20px;
+  width: 200px;
+  height: 240px; }
+
 .itemImage {
   border-radius: 20px;
   width: 320px;
@@ -219,11 +264,14 @@ footer ul li a {
 
 .addReviewButton {
   border: solid;
-  background-color: palevioletred;
-  color: white;
+  background-color: #43a3e6;
+  color: floralwhite;
   padding: 10px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
   border-radius: 20px; }
+
+.addReviewButton2 {
+  padding-left: 40px; }
 
 .searchBox {
   padding-top: 40px;
@@ -252,6 +300,10 @@ footer ul li a {
   padding-left: 100px; }
 
 .leftfl {
+  float: right;
+  clear: both; }
+
+.leftfl2 {
   float: right; }
 
 .spec {
@@ -267,5 +319,11 @@ footer ul li a {
   text-transform: uppercase;
   transition: .3s ease background;
   width: 100%; }
+
+.spec2 {
+  padding-bottom: 40px; }
+
+.clearb {
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */

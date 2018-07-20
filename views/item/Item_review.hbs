@@ -1,10 +1,28 @@
-{{item.title}}
+<div class="indexpage">
+<div class="pad">
+<div class="indexcont container">
 
-<form action="/gallery/{{item.id}}/reviews/create" method="post">
+<div><h1>{{item.title}}</h1> reviewed by {{theUser.username}}</div>
 
-    <div>{{theUser.username}}</div>
-    <input for="title" name="title">Title</input><br>
-    <label for="content"> What do you have to say?</label>
-    <textarea id="content" name="content" cols="30" rows="10"></textarea>
-    <button type="submit">Submit</button>
+
+<form class="form2" action="/gallery/{{item.id}}/reviews/create" method="post">
+
+    <label for="title">Short name for your Story</label>
+    <input class="leftfl" for="title" name="title">
+
+    <br>
+    
+    <label for="content"> What do you think?</label>
+    
+    <br>
+    <textarea class="leftfl " id="content" name="content" cols="30" rows="5"></textarea>
+    <br><br><br><br><br><br>
+    
+    <button class="spec" type="submit"> Create review</button>
 </form>
+
+
+
+</br>
+</div>
+</div>
