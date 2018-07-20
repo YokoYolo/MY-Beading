@@ -36,10 +36,6 @@ const items = [
 
 ]
 
-
-
-
-
   const posts = [
       {
           title: 'Peyote Stitch Beading: A Tutorial for Getting Started',
@@ -54,17 +50,9 @@ const items = [
   .then ((result)=>{
     Post.create(posts)
     .then ((result)=>{
-        console.log (`created ${result.length} items`);
-      console.log (`created ${result.length} items`);
       mongoose.disconnect();
-  })
+  })})
   .catch ((err)=>{
       console.log('error');
   })
   
-  
-  
-  
-  
-
-
