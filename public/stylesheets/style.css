@@ -98,7 +98,11 @@ footer ul li a {
 
 .bodyimage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
-  background-size: cover; }
+  background-size: cover;
+  max-width: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 .pad {
   padding-top: 80px; }
@@ -139,8 +143,7 @@ footer ul li a {
   color: lightslategray;
   width: 500px;
   height: 300px;
-  margin-top: 30px;
-  align-items: center; }
+  margin-top: 30px; }
 
 .container4 {
   margin: auto;
@@ -154,6 +157,22 @@ footer ul li a {
   width: 300px;
   height: 150px;
   margin-top: 30px; }
+
+.container5 {
+  display: flex;
+  background: transparent;
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  color: lightslategray;
+  margin-top: 30px;
+  justify-content: center; }
+
+.container5 img {
+  align-content: center;
+  align-items: center;
+  border-radius: 40px;
+  height: 70vh; }
 
 .cent {
   align-content: center;
@@ -265,12 +284,6 @@ footer ul li a {
   border-radius: 20px;
   width: 320px;
   height: 300px; }
-
-.itemImageFull {
-  padding-top: 40px;
-  border-radius: 100px;
-  width: 620px;
-  height: 600px; }
 
 .oneItemPage {
   display: flex;

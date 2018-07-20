@@ -1,31 +1,25 @@
 
 
-<div class="wrapper">
+<div class="container5">
+    <div>
+    <div><img class="itemImageFull" src="{{item.image}}"></div>
 
-<div>
+    <div class="container3 cent">
 
-        <div><img class="itemImageFull" src="{{item.image}}"></div>
+            <div>
+            <h1>{{item.title}}</h1>
+            <h6>price: ${{item.price}}.00</h6>
 
-
-<div class="container3 cent">
-
-        <div>
-        <h1>{{item.title}}</h1>
-        <h6>price: ${{item.price}}.00</h6>
-
-        <p>{{item.description}}</p>
-        </div>
-        <div class="addReviewButton2">
-{{#if theUser}}
-<a href="/gallery/{{item.id}}/reviews/new" class="addReviewButton leftfl">Add a Review</a>
-{{/if}}
-</div>
-    
-
-
-
-</div>
-</div>
+            <p>{{item.description}}</p>
+            </div>
+            
+            <div class="addReviewButton2">
+            {{#if theUser}}
+            <a href="/gallery/{{item.id}}/reviews/new" class="addReviewButton leftfl">Add a Review</a>
+            {{/if}}
+            </div>  
+    </div>
+    </div>
 </div>
 
 <hr>

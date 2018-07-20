@@ -197,6 +197,27 @@ footer ul li a{
  
 }
 
+.container5 {
+  display: flex;
+  background: transparent;
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  color: lightslategray;
+  margin-top: 30px;
+  justify-content: center;
+
+ 
+}
+
+.container5 img {
+  align-content: center;
+  align-items: center;
+    border-radius: 40px;
+    height: 70vh;
+  
+}
+
 .cent {
   align-content: center;
   align-items: center;
@@ -335,11 +356,7 @@ color: #43a3e6;
 
  // ========================================================================== 
  // Item page
-.itemImageFull {
-  padding-top: 40px;
-  border-radius: 100px;
-  width: 620px;
-  height: 600px; }
+
 
   .oneItemPage {
     display: flex;
