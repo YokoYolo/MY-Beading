@@ -1,5 +1,10 @@
-{{item.title}}
-<h2>Edit this Review</h2>
+<div class="indexpage">
+<div class="pad">
+<div class="indexcont container">
+
+<div><h1>{{item.title}}
+</h1> Edite by {{theUser.username}}</div>
+
 
 
 <form action="/gallery/{{item.id}}/reviews/{{ri}}/update" method="post">
@@ -10,3 +15,9 @@
     <textarea id="content" name="content" cols="30" rows="10"></textarea>
     <button type="submit">Submit</button>
 </form>
+
+
+</br>
+</div>
+</div>
+</div>
