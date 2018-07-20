@@ -66,8 +66,7 @@
 
 footer {
   background-color: #2d354d;
-  color: white;
-  width: 100%; }
+  color: white; }
 
 footer ul {
   list-style-type: none; }
@@ -80,8 +79,9 @@ footer ul li a {
   color: white; }
 
 .footer-top {
-  padding: 20px 30px;
+  padding: 10px 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding-right: 60px; }
 

@@ -83,8 +83,7 @@
 footer {
   background-color: #2d354d;
   color: white; 
-  position: fixed;
-  width: 100%;
+
 }
 
 footer ul {
@@ -101,8 +100,9 @@ footer ul li a{
 }
 
 .footer-top {
-  padding: 20px 30px;
+  padding: 10px 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding-right: 60px; 
 }
