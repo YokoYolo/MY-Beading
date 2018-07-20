@@ -25,9 +25,14 @@
 <div class="container2">
 
 {{#each postsArray}}
-    <div class="itemImageFull">{{image}}</div> 
+<div>
+    <div class="cont2">
+    <img class="itemImageFull" src="{{image}}">
     <h4>{{title}}</h4>
     <h4>{{shortdescription}}</h4>
+</div>
+</div>
+    <hr>
 
 {{!-- {{#if this.mine}}
 <form action="/blog/{{.id}}/delete" method="post">
