@@ -343,6 +343,9 @@ footer ul li a {
   transition: .3s ease background;
   width: 100%; }
 
+.spec button {
+  box-sizing: border-box; }
+
 .spec2 {
   padding-bottom: 40px; }
 

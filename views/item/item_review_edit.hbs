@@ -7,7 +7,7 @@
 
 
 
-<form id="form" action="/gallery/{{item.id}}/reviews/{{ri}}/update" method="post">
+<form class="form2" action="/gallery/{{item.id}}/reviews/{{ri}}/update" method="post">
 
     <label for="title"> New name for you Story</label>
     <input class="leftfl" for="title" name="title" value="{{review.title}}"><br>
@@ -15,8 +15,10 @@
     <br>
     <textarea class="leftfl" id="content" name="content" cols="30" rows="10">{{review.content}}</textarea>
     <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
-    <button  type="submit">Submit</button>
+    <br><br><br>
+    <br><br>
+    
+    <button class="spec"  type="submit">Submit</button>
 </form>
 
 
