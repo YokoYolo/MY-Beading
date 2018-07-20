@@ -83,6 +83,7 @@
 footer {
   background-color: #2d354d;
   color: white; 
+  position: fixed;
   width: 100%;
 }
 
@@ -118,8 +119,6 @@ footer ul li a{
   margin: 0 0;
   position: fixed;
   width: 100%;
-  
-  
 }
 .bodyimage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
