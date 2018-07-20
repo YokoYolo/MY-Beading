@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const Item = require('../models/item');
 
-const dbName = 'miss-yoko-beading'
-mongoose.connect(`mongodb://localhost/${dbName}`);
+// const dbName = 'miss-yoko-beading'
+mongoose.connect(process.env.MONGODB_URI);
 
+// `mongodb://localhost/${dbName}`
 const items = [
     {
          title: 'Forest Pearl',
