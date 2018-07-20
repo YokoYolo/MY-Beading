@@ -109,6 +109,7 @@ footer ul li a {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   border: solid .4px black;
   background-color: white;
   border-radius: 40px;
@@ -120,12 +121,14 @@ footer ul li a {
 
 .container2 {
   display: flex;
+  flex-wrap: wrap;
   border: solid .4px black;
   background-color: white;
   border-radius: 40px;
   padding: 30px;
   margin: 40px;
   justify-content: flex-start;
+  align-content: center;
   align-items: center;
   color: lightslategray;
   font-size: 13px; }
@@ -141,18 +144,23 @@ footer ul li a {
   padding: 30px;
   text-align: left;
   color: lightslategray;
+  justify-content: center;
+  align-items: center;
   width: 50vh;
   height: 150px;
   margin-top: 30px; }
 
 .container4 {
   margin: auto;
+  flex-wrap: wrap;
   width: 50%;
   border: solid .4px black;
   background-color: white;
   border-radius: 40px;
   padding: 30px;
   text-align: left;
+  justify-content: center;
+  align-items: center;
   color: lightslategray;
   width: 300px;
   height: 150px;
@@ -160,13 +168,15 @@ footer ul li a {
 
 .container5 {
   display: flex;
+  flex-wrap: wrap;
   background: transparent;
   margin: auto;
   width: 50%;
   padding: 20px;
   color: lightslategray;
   margin-top: 30px;
-  justify-content: center; }
+  justify-content: center;
+  align-content: center; }
 
 .container5 img {
   align-content: center;

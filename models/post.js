@@ -6,6 +6,7 @@ const postSchema = new Schema({
   title: String,
   // image: String,
   description: String,
+  image: String, 
   shortdescription: String,
   reviews:[{title: String, content: String, reviewer:{type: Schema.Types.ObjectId, ref: 'User' }, date: Date  }]
 ,},

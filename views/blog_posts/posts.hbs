@@ -20,9 +20,10 @@
 {{/if}}
 
 <hr>
-
+<div class="container">
 
 {{#each post}}
+    <div class="itemImageFull">{{post.image}}</div> 
     <h4>{{post.title}}</h4>
     <h4>{{post.shortdescription}}</h4>
 
@@ -30,20 +31,20 @@
 <form action="/blog/{{post.id}}/delete" method="post">
 <button>Delete</button>
 </form>
-
 <p><button onclick = "location.href='/blog/{{post.id}}/edit'")> 
 Edit This Post </button></p>
 {{/if}}
-
-
     <hr>
 {{/each}}
-
 </div>
 
 </div>
+
 </div>
 </div>
+</div>
+
+
 
 
 
