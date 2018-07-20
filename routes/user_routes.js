@@ -49,8 +49,8 @@ userRouter.get('/login', (req, res, next)=>{
 });
 
 
-// userRouter.post("/login", passport.authenticate("local", {
-userRouter.post("/login", passport.createStrategy("local", {
+userRouter.post("/login", passport.authenticate("local", {
+// userRouter.post("/login", passport.createStrategy("local", {
     successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true,

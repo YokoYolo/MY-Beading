@@ -1,24 +1,29 @@
+<div class="wrapper">
+
+<div>
+
+        <div><img class="itemImageFull" src="{{item.image}}"></div>
 
 
-<div><img class="itemImageFull" src="{{item.image}}"></div>
+        <h1>{{item.title}}</h1>
+        <h4>price: ${{item.price}}</h4>
 
-<br>
+        <p>{{item.description}}</p>
+        <hr>
 
-<h1>{{item.title}}</h1>
-<h4>price: {{item.price}}</h4>
 
-<p>{{item.description}}</p>
-
+</div>
+</div>
 <hr>
 
 {{#if theUser}}
-<a href="/gallery/{{item.id}}/reviews/new">Add a Review</a>
+<a href="/gallery/{{item.id}}/reviews/new" class="addReviewButton">Add a Review</a>
 {{/if}}
-<hr>
+
 
 {{#each item.reviews}}
-    <h4>{{this.title}}</h4>
-    <h4>{{this.reviewer}}</h4>
+    <h5>{{this.title}}</h5>
+    <h6>by: {{this.reviewer.username}}</h6>
     <p>{{this.content}}</p>
 
 
@@ -35,6 +40,5 @@ Edit This Review </button></p>
 
     <hr>
 {{/each}}
-
 
 

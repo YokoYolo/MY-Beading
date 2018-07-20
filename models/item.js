@@ -8,6 +8,7 @@ const itemsSchema = new Schema({
   image: String,
   description: String,
   shortdescription: String,
+  itemtype: String,
   reviews:[{title: String, content: String, reviewer:{type: Schema.Types.ObjectId, ref: 'User' }, date: Date  }]
 ,}, 
   {timestamps: true});

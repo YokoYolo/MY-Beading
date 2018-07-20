@@ -6,19 +6,31 @@ mongoose.connect(`mongodb://localhost/${dbName}`);
 
 const items = [
     {
-         title: 'thingi',
+         title: 'Forest Pearl',
          price: '69.00',
-         image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_UX182_CR0,0,182,268_AL_.jpg',
-         description: 'coolthingi',
-      shortdescription: 'cool',
+         image: 'https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532031510/N1.jpg',
+         description: 'Handmade necklace with rainforest Jasper and river pearl',
+         itemtype: 'Necklace',
+      shortdescription: 'Handmade necklace with rainforest Jasper and river pearl',
     },
+
     {
         title: 'thingi2',
         price: '38.00',
-        image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_UX182_CR0,0,182,268_AL_.jpg',
+        image: 'https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532031510/N1.jpg',
         description: 'coolthingi',
+        itemtype: 'Earings',
         shortdescription: 'cool',
-        }
+    },
+
+    {
+        title: 'thingi3',
+        price: '38.00',
+        image: 'https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532031510/N1.jpg',
+        description: 'coolthingi',
+        itemtype: 'Bracelet',
+        shortdescription: 'cool',
+    }
 
 ]
 Item.create(items)

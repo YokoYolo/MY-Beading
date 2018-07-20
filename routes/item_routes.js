@@ -19,16 +19,15 @@ itemRouter.get('/gallery', (req, res, next)=>{
 itemRouter.get('/gallery/:id', (req, res, next)=>{
     const id = req.params.id
     Item.findById(id)
+    .populate ('reviews.reviewer')
     .then((theItem)=>{
         theItem.reviews.forEach(oneReview => {
+            if (req.user) {
             if (oneReview.reviewer.equals(req.user.id)) {
                 oneReview.mine = true;
-            } 
-        });
-
-
-
-        res.render('item/item', {item: theItem, theUser: req.user})
+            }
+        }});
+        res.render('item/item', {item: theItem, theUser: req.user })
     })
     .catch((err)=>{
         next(err);

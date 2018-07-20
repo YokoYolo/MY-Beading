@@ -20,14 +20,8 @@
   <body>
 
 
-
-
-
       <nav class="navigation">    
   
-          <img class ="logo" src="images/logo2.png" alt="Miss Yoko Beading">
-        
-              
             <li><a href="/">Home</a> </li>
             
             <li>   
@@ -36,16 +30,19 @@
                         id="dropdownMenuButton">
                         Gallery</a>
                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="/gallery/earings">Earings</a>
-                            <a class="dropdown-item" href="/gallery/necklace">Necklace</a>
-                            <a class="dropdown-item" href="/gallery/bracelets">Bracelets</a>
-                            <a class="dropdown-item" href="/gallery/rings">Rings</a>
+                            <a class="dropdown-item" href="/gallery">Earings</a>
+                            <a class="dropdown-item" href="/gallery">Necklace</a>
+                            <a class="dropdown-item" href="/gallery">Bracelets</a>
+                            <a class="dropdown-item" href="/gallery">Rings</a>
                         </div>          
                 </div>
             </li> 
-                
+            
+           
+
+            <li><a href="/blog">Stories</a></li>
+            <li><a href="/"> <img class ="logo" src="https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532067003/Screen_Shot_2018-07-20_at_2.09.31_AM.png" alt="Miss Yoko Beading"></a></li>
             <li><a href="/about-us">About Us</a></li>
-            <li><a href="/blog">Blog</a></li>
             <li><a href="/shipping">Shipping info</a></li>
 
 {{!-- neeed to add function to show one or another --}}
@@ -55,9 +52,11 @@
 
       </nav>
 
+
+
 <div class="space"></div>
 
-    {{{body}}}
+  <div class="bodyimage">{{{body}}}</div>
 
 
 <footer>
@@ -105,10 +104,11 @@
 </footer>
 
 
-    <script src='/javascripts/script.js'></script>
+    
     <script src="https://use.fontawesome.com/1fb0eb3889.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src='/javascripts/script.js'></script>
   </body>
 </html>

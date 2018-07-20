@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Schema   = mongoose.Schema
-,passportEmail = require('passport-email')
-      ;
+const Schema   = mongoose.Schema;
+// ,passportEmail = require('passport-email')
+//       ;
 
 const userSchema = new Schema({
     username: String,
@@ -16,9 +16,9 @@ const userSchema = new Schema({
   );
 
 
+ 
+//   userSchema.plugin(passportEmail);
   const User = mongoose.model("User", userSchema);
-  
-  User.plugin(passportEmail);
 
   module.exports = User;
 
