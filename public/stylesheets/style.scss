@@ -125,6 +125,11 @@ footer ul li a{
 .bodyimage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
   background-size: cover;
+  max-width:100%;
+  width:100%;
+  background-position:center center;
+  background-repeat:no-repeat;
+  
 }
 
 .pad {
@@ -173,7 +178,7 @@ footer ul li a{
   width: 500px;
   height: 300px;
   margin-top: 30px;
-  align-items: center;
+  
  
 }
 
