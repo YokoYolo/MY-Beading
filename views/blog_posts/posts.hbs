@@ -22,20 +22,20 @@
 <hr>
 <div class="container">
 
-{{#each post}}
-    <div class="itemImageFull">{{post.oneImage}}</div> 
-    <h4>{{post.title}}</h4>
-    <h4>{{post.shortdescription}}</h4>
+{{#each postArray}}
+    <div class="itemImageFull">{{this.oneImage}}</div> 
+    <h4>{{this.title}}</h4>
+    <h4>{{this.shortdescription}}</h4>
 
-{{#if this.mine}}
-<form action="/blog/{{post.id}}/delete" method="post">
+{{!-- {{#if this.mine}}
+<form action="/blog/{{.id}}/delete" method="post">
 <button>Delete</button>
 </form>
 <p><button onclick = "location.href='/blog/{{post.id}}/edit'")> 
 Edit This Post </button></p>
 {{/if}}
-    <hr>
-{{/each}}
+    <hr>--}}
+{{/each}} 
 </div>
 
 </div>
