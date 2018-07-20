@@ -5,16 +5,20 @@
     {{#each itemsArray}}
 
 
+
         <div class="itemsList_2">
 
 
             <a href="/gallery/{{this._id}}">
             <img class="itemImage" src="{{this.image}}"><a>
-            <h3>{{this.title}}</h3>
-            ${{this.price}}.00</br>
-            <p>{{this.shortdescription}}</p>
+
+                <div class="container4 cent">
+                        <h3>{{this.title}}</h3>
+                    ${{this.price}}.00</br>
+                    <p>{{this.shortdescription}}</p>
+                </div>
             </a>
-             </div>
+        </div>
 
     </a>
    
