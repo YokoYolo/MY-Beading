@@ -1,7 +1,5 @@
 <!-- Search form -->
-<div class="searchBox">
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
-</div>
+
 
 
 <div class="indexpage">
@@ -9,6 +7,10 @@
 <div class="indexcont container">
 
 <div ="postsPage">
+
+<div class="searchBox">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+</div>
 
 <h1>Welcome to our Stories</h1>
 
@@ -23,8 +25,8 @@
 <div class="container">
 
 {{#each postArray}}
-    <div class="itemImageFull">{{this.theImage}}</div> 
-    <h4>{{this.title}}</h4>
+    <div class="itemImageFull">{{post.theImage}}</div> 
+    <h4>{{posts.title}}</h4>
     <h4>{{this.shortdescription}}</h4>
 
 {{!-- {{#if this.mine}}
