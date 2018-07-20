@@ -16,6 +16,7 @@
 .navigation {
   display: flex;
   position: fixed;
+  flex-wrap: wrap;
   margin: auto;
   justify-content: space-between;
   align-content: flex-start;
