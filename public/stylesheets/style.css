@@ -93,6 +93,7 @@ footer ul li a {
   height: 1000px;
   margin-left: 0;
   margin-right: 0;
+  padding-right: 0;
   width: 100%; }
 
 .bodyimage {
@@ -347,5 +348,8 @@ footer ul li a {
 
 .clearb {
   clear: both; }
+
+input [type="text"] {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
