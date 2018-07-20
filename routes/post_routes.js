@@ -23,11 +23,12 @@ postRouter.get('/blog/create', (req, res, next)=>{
   res.render('blog_posts/create_post', {theUser: req.user})
 })
 
-postRouter.post('/blog_posts/create_post',(req, res, next)=>{
+postRouter.post('/blog_posts/create_post', uploadCloud.single('image'),(req, res, next)=>{
   const newpost = new Post({
    title: req.body.title,
    shortdescription: req.body.shortdescription,
    description: req.body.description,
+   image: req.file.url,
   //  date = Date.now(),
   //  reviews = [],
   })
