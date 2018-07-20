@@ -23,7 +23,7 @@ postRouter.get('/blog/create', (req, res, next)=>{
   res.render('blog_posts/create_post', {theUser: req.user})
 })
 
-postRouter.post('/create_post', (req, res, next)=>{
+postRouter.post('/blog_posts/create_post',(req, res, next)=>{
   const newpost = new Post({
    title: req.body.title,
    shortdescription: req.body.shortdescription,
