@@ -5,6 +5,10 @@ const Post         = require('../models/post');
 const bcrypt       = require('bcryptjs');
 const passport     = require('passport');
 const ensureLogin = require("connect-ensure-login")
+const uploadCloud = require("../config/cloudinary")
+
+
+
 
 //create page Blog
 
