@@ -10,7 +10,7 @@ const User       = require('../models/user');
 itemReviewRouter.get ('/gallery/:id/reviews/new', (req, res, next)=>{
     Item.findById (req.params.id)
         .then ((theItem)=>{
-        res.render('item/item_review',{item: theItem, theUser: req.user})
+        res.render('item/Item_review',{item: theItem, theUser: req.user})
     })
     .catch((err)=>{
         next (err)
