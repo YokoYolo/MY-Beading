@@ -35,7 +35,7 @@ userRouter.post('/signup', uploadCloud.single('theImage'), (req, res, next)=>{
             const hashedPassword = bcrypt.hashSync(thePassword, salt);
             User.create({username: theUsername, password: hashedPassword, email: theEmail, name: theName, lastname: theLastName, image: theImage })
             .then((response)=>{
-                res.redirect('/');
+                res.redirect('/login');
             })
             .catch((err)=>{
                 next(err);
