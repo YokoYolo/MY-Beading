@@ -10,6 +10,7 @@
 .navigation {
   display: flex;
   position: fixed;
+  margin: auto;
   justify-content: space-between;
   align-content: flex-start;
   align-items: center;
@@ -87,7 +88,8 @@ footer ul li a {
 .indexpage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
   background-size: cover;
-  height: 1000px; }
+  height: 1000px;
+  margin: 0 0; }
 
 .bodyimage {
   background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
