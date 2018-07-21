@@ -1,3 +1,25 @@
+.indexpage {
+  background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
+  margin: 0% auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 150px; }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  color: lightslategray;
+  clear: both; }
+
 .body {
   margin: 0 0; }
 
@@ -87,38 +109,6 @@ footer ul li a {
   padding-right: 60px; }
 
 /*# sourceMappingURL=style.css.map */
-.indexpage {
-  background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
-  background-size: cover;
-  height: 1000px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-right: 0;
-  width: 100%; }
-
-.bodyimage {
-  background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
-  background-size: cover;
-  max-width: 100%;
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat; }
-
-.pad {
-  padding-top: 80px; }
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  border: solid .4px black;
-  background-color: white;
-  border-radius: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  color: lightslategray; }
-
 .container2 {
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +137,7 @@ footer ul li a {
   justify-content: center;
   align-items: center;
   width: 50vh;
-  height: 150px;
+  height: 200px;
   margin-top: 30px; }
 
 .container4 {

@@ -1,4 +1,54 @@
 
+// index page
+
+
+
+.indexpage {
+  background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
+  margin: 0% auto;
+  // width: 100%;
+  // background: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 150px;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  // border: solid .4px black;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px; 
+  justify-content: center;
+  align-items: center;
+  color: lightslategray;
+  clear: both;
+}
+
+// ==========================================================================
+
+// .topul {
+//   position: relative;
+//   float: right;
+//   list-style-type: none;
+//   text-align: center;
+//   margin: 0;
+//   padding: 0;
+//   padding-top:20px;
+//   height: 100%;
+// }
+// .topul li{
+//   display: inline-block;
+//   font-size: 25px;
+//   padding: 20px;
+//   font-weight: lighter;
+
 // navigation
 
 .body {
@@ -109,48 +159,8 @@ footer ul li a{
 }
 
 /*# sourceMappingURL=style.css.map */
-
-// ==========================================================================
-
 //index page
-.indexpage {
-  background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
-  background-size: cover;
-  height: 1000px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-right: 0;
-  width: 100%;
-  padding-top: 20px;
-}
-.bodyimage {
-  background-image: url(https://res.cloudinary.com/miss-yoko-beading/image/upload/v1532034923/background4.jpg);
-  background-size: cover;
-  max-width:100%;
-  width:100%;
-  background-position:center center;
-  background-repeat:no-repeat;
-  
-}
 
-.pad {
-  padding-top: 80px;
-  
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  border: solid .4px black;
-  background-color: white;
-  border-radius: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px; 
-  justify-content: center;
-  align-items: center;
-  color: lightslategray;
-
-}
 
 .container2 {
   display: flex;

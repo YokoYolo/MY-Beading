@@ -8,7 +8,6 @@ router.get('/', (req, res, next) => {
   res.render('index', { theUser: req.user });
 });
 
-
 router.get('/about-us', (req, res, next) => {
   res.render('nav/about_us', { theUser: req.user });
 });
