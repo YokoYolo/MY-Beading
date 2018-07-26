@@ -2,56 +2,44 @@
 
 
 
-<div class="indexpage">
-<div class="pad">
-<div class="indexcont container">
+<div class="container">
 
-<div ="postsPage">
-
-<div class="searchBox">
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
-</div>
-
-<h1>Welcome to our Stories</h1>
+    <div class="searchBox">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+    </div>
 
 
 
+    <h1>Welcome to our Stories</h1>
 
-{{#if theUser}}
-<a href="/blog/create">Add New Post</a>
+
+    {{#if theUser}}
+    <a href="/blog/create">Add New Post</a>
+    {{/if}}
+
+
+
+    {{#each postsArray}}
+        <div>
+            <div class="cont2">
+            <img class="itemImagesmall" src="{{image}}">
+            <h4>{{title}}</h4>
+            <h4>{{shortdescription}}</h4>
+        </div>
+
+        <hr>
+    {{#if this.mine}}
+
+    <form action="/stories/{{.id}}/delete" method="post">
+    <button>Delete</button>
+    </form>
+
+    <p><button onclick = "location.href='/stories/{{post.id}}/edit'")> Edit This Post </button></p>
+
 {{/if}}
-
-<hr>
-<div class="container2">
-
-{{#each postsArray}}
-<div>
-    <div class="cont2">
-    <img class="itemImagesmall" src="{{image}}">
-    <h4>{{title}}</h4>
-    <h4>{{shortdescription}}</h4>
-</div>
-</div>
     <hr>
-
-{{!-- {{#if this.mine}}
-<form action="/blog/{{.id}}/delete" method="post">
-<button>Delete</button>
-</form>
-<p><button onclick = "location.href='/blog/{{post.id}}/edit'")> 
-Edit This Post </button></p>
-{{/if}}
-    <hr>--}}
 {{/each}} 
 </div>
-
-</div>
-
-</div>
-</div>
-</div>
-
-
 
 
 

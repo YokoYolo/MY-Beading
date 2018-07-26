@@ -12,7 +12,7 @@ const uploadCloud = require("../config/cloudinary")
 
 //create page Blog
 
-postRouter.get('/blog', (req, res, next) => {
+postRouter.get('/stories', (req, res, next) => {
   Post.find()
   .then((listOfPosts)=>{
   res.render('blog_posts/posts', {postsArray: listOfPosts, theUser: req.user});
@@ -23,11 +23,11 @@ postRouter.get('/blog', (req, res, next) => {
   });
 
 // create Blog post
-postRouter.get('/blog/create', (req, res, next)=>{
+postRouter.get('/stories/create', (req, res, next)=>{
   res.render('blog_posts/create_post', {theUser: req.user})
 })
 
-postRouter.post('/blog/create', uploadCloud.single('image'),(req, res, next)=>{
+postRouter.post('/stories/create', uploadCloud.single('image'),(req, res, next)=>{
   const newpost = new Post({
    title: req.body.title,
    shortdescription: req.body.shortdescription,
@@ -39,7 +39,7 @@ postRouter.post('/blog/create', uploadCloud.single('image'),(req, res, next)=>{
 
 newpost.save()
 .then((response)=>{
-  res.redirect('/blog')
+  res.redirect('/stories')
 })
 .catch((err)=>{
   next(err);
@@ -49,7 +49,7 @@ newpost.save()
 
 // open Blog post
 
-postRouter.get('/blog/:id', (req, res, next)=>{
+postRouter.get('/stories/:id', (req, res, next)=>{
   const id = req.params.id
   Post.findById(id)
   .then((thePost)=>{
@@ -63,7 +63,7 @@ postRouter.get('/blog/:id', (req, res, next)=>{
 
 //edit Blog post
 
-postRouter.get('/blog/:id/edit', (req, res, next)=>{
+postRouter.get('/stories/:id/edit', (req, res, next)=>{
   Post.findById(req.params.id)
   .then((thePost)=>{
   res.render('blog_posts/update_post', {mypost: thePost,  theUser: req.user})
@@ -74,7 +74,7 @@ postRouter.get('/blog/:id/edit', (req, res, next)=>{
 })
 
 // update edited Blog post
-postRouter.post('/blog/:id/update', (req, res, next)=>{
+postRouter.post('/stories/:id/update', (req, res, next)=>{
 const postId = req.params.id;
 theUser = req.user
 
@@ -88,7 +88,7 @@ const editedPost = {
 
   Post.findByIdAndUpdate(postId, editedPost)
   .then(()=>{
-      res.redirect('/blog/' + postId)
+      res.redirect('/stories/' + postId)
   })
   .catch((err)=>{
       next(err);
@@ -97,10 +97,10 @@ const editedPost = {
 
 // delete Blog post
 
-postRouter.post('/blog/:id/delete', (req, res, next)=>{
+postRouter.post('/stories/:id/delete', (req, res, next)=>{
   Post.findByIdAndRemove(req.params.id)
   .then(()=>{
-      res.redirect('/blog');
+      res.redirect('/stories');
   })
   .catch((err)=>{
       next(err);
