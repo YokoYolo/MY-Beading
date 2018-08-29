@@ -1,0 +1,27 @@
+<div class="indexpage">
+<div class="pad">
+<div class="indexcont container">
+
+<div><h1>{{post.title}}</h1> reviewed by {{theUser.username}}</div>
+
+
+<form class="form" action="/stories/{{post.id}}/reviews/create" method="post">
+
+    <label for="title">Short name for your Story</label>
+    <input class="leftfl" for="title" name="title">
+
+    <br>
+    <label for="content"> What do you think?</label>
+    <br>
+    <textarea class="leftfl" id="content" name="content" cols="30" rows="5"></textarea>
+    <br><br><br><br><br><br>
+    
+    <button class="spec" type="submit"> Create review</button>
+</form>
+
+
+
+</br>
+</div>
+</div>
+</div>

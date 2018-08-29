@@ -1,42 +1,42 @@
 const express      = require('express');
 const postRouter   = express.Router();
-const User         = require('../models/user');
 const Post         = require('../models/post');
-const bcrypt       = require('bcryptjs');
-const passport     = require('passport');
-const ensureLogin = require("connect-ensure-login")
 const uploadCloud = require("../config/cloudinary")
 
+const User         = require('../models/user');
+// const bcrypt       = require('bcryptjs');
+// const passport     = require('passport');
+// const ensureLogin = require("connect-ensure-login")
 
 
 
-//create page Blog
+// all Blog Posts  
 
 postRouter.get('/stories', (req, res, next) => {
   Post.find()
-  .then((listOfPosts)=>{
-  res.render('blog_posts/posts', {postsArray: listOfPosts, theUser: req.user});
-  })
-  .catch((err)=>{
+    .then((listOfPosts)=>{
+      res.render('blog_posts/posts', {postsArray: listOfPosts, theUser: req.user});
+    })
+    .catch((err)=>{
       next(err);
-  })
+    })
   });
 
 // create Blog post
-postRouter.get('/stories/create', (req, res, next)=>{
+postRouter.get('/stories/create', (req, res)=>{
   res.render('blog_posts/create_post', {theUser: req.user})
 })
 
+
 postRouter.post('/stories/create', uploadCloud.single('image'),(req, res, next)=>{
   const newpost = new Post({
-   title: req.body.title,
-   shortdescription: req.body.shortdescription,
-   description: req.body.description,
-  image: req.file.url,
-  //  date = Date.now(),
-  //  reviews = [],
+    title: req.body.title,
+    shortdescription: req.body.shortdescription,
+    description: req.body.description,
+    image: req.file.url,
+    date: Date.now(),
+    reviews: [],
   })
-
 newpost.save()
 .then((response)=>{
   res.redirect('/stories')
@@ -51,15 +51,24 @@ newpost.save()
 
 postRouter.get('/stories/:id', (req, res, next)=>{
   const id = req.params.id
-  Post.findById(id)
-  .then((thePost)=>{
-      res.render('post', {post: thePost})
-  })
-  .catch((err)=>{
-      next(err);
-  })
-
+  Post.findById(id)  
+  .populate ('reviews.reviewer')
+      .then((thePost)=>{
+          thePost.reviews.forEach(oneReview => {
+              if (req.user) {
+              if (oneReview.reviewer.equals(req.user.id)) {
+                  oneReview.mine = true;
+              }
+          }});
+          res.render('blog_posts/post', {post: thePost, theUser: req.user })
+      })
+      .catch((err)=>{
+          next(err);
+      })
 });
+
+
+
 
 //edit Blog post
 
@@ -82,7 +91,7 @@ const editedPost = {
    title: req.body.title,
    shortdescription: req.body.shortdescription,
    description: req.body.description,
-  //  date = Date.now(),
+   date: Date.now(),
    reviews: reviewer = req.user.id,
 }
 

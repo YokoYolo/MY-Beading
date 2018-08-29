@@ -1,42 +1,53 @@
-<!-- Search form -->
 
+
+<div class="container">
+<div class="container">
+    
+    <div><h1>Welcome to our Stories</h1></div>
+
+    <div>
+        {{#if theUser}}
+        <a href="/stories/create">Add New Post</a>
+        {{/if}}
+    </div>
+
+    <div class="searchBox">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+    </div>
+</div>
 
 
 <div class="container">
 
-    <div class="searchBox">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
-    </div>
-
-
-
-    <h1>Welcome to our Stories</h1>
-
-
-    {{#if theUser}}
-    <a href="/stories/create">Add New Post</a>
-    {{/if}}
-
-
 
     {{#each postsArray}}
         <div>
-            <div class="cont2">
-            <img class="itemImagesmall" src="{{image}}">
+            <div class="itemList_2">
+            <img class="itemImage" src="{{image}}">
             <h4>{{title}}</h4>
             <h4>{{shortdescription}}</h4>
+            <h4><a href="/stories/{{this._id}}">See post...</a></H4>
         </div>
 
         <hr>
-    {{#if this.mine}}
 
-    <form action="/stories/{{.id}}/delete" method="post">
+
+    {{#if theUser}}
+
+    <form action="/stories/{{post.id}}/delete" method="post">
     <button>Delete</button>
     </form>
 
     <p><button onclick = "location.href='/stories/{{post.id}}/edit'")> Edit This Post </button></p>
 
 {{/if}}
+
+        <div class="addReviewButton2">
+            {{#if theUser}}
+            <a href="/stories/{{post.id}}/reviews/new" class="addReviewButton leftfl">Add a Review</a>
+            {{/if}}
+        </div>  
+
     <hr>
 {{/each}} 
 </div>
@@ -45,3 +56,4 @@
 
 
 
+</div>

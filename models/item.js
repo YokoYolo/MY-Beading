@@ -4,7 +4,6 @@ const Schema   = mongoose.Schema;
 const itemsSchema = new Schema({
   title: String,
   price: Number,
-// price: NumberDecimal( "0.01" ),
   image: String,
   description: String,
   shortdescription: String,

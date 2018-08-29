@@ -1,1 +1,56 @@
 mml
+
+<div class="container5">
+    <div>
+        <div><img class="itemImageFull" src="{{post.image}}"></div>
+
+        <div class="container3 cent">
+
+            <div>
+            <h1>{{post.title}}</h1>
+
+            <p>{{post.description}}</p>
+            </div>
+        </div>
+
+        <div class="addReviewButton2">
+            {{#if theUser}}
+            <a href="/stories/{{post.id}}/reviews/new" class="addReviewButton leftfl">Add a Review</a>
+            {{/if}}
+        </div>  
+    </div>
+</div>
+
+
+
+<hr>
+<br>
+<div class="container2">
+
+<div class="cont2">
+{{#each post.reviews}}
+<div>
+    <span>{{this.title}}</span><br>
+    <span>by: {{this.reviewer.username}}</span><br>
+    <span class="reviewtext">{{this.content}}</span>
+
+
+
+<br>
+{{#if this.mine}}
+<form action="/stories/{{../post.id}}/reviews/{{@index}}/delete" method="post">
+<button class=" addReviewButton leftfl">delete</button>
+</form>
+<br>
+<div class="space2"><button class="addReviewButton leftfl" onclick = "location.href='/stories/{{../post.id}}/reviews/{{@index}}/edit'")> 
+Edit This Review </button></div>
+{{/if}}
+</div>
+<div class="space"></div>
+<hr>
+{{/each}}
+</div>
+</div>
+
+</div>
+

@@ -2,6 +2,8 @@ const express      = require('express');
 const itemReviewRouter   = express.Router();
 const Item       = require('../models/item');
 const User       = require('../models/user');
+
+
 // const bcrypt       = require('bcryptjs');
 // const passport     = require('passport');
 // const ensureLogin = require("connect-ensure-login")
@@ -23,7 +25,7 @@ itemReviewRouter.post('/gallery/:id/reviews/create', (req, res, next) =>{
     newReview.date = Date.now();
 
     Item.findByIdAndUpdate (req.params.id, {$push: {reviews:newReview}})
-        .then ((response) =>{
+        .then ((res) =>{
             res.redirect(`/gallery/${req.params.id}`)
         })
     .catch((err)=>{
