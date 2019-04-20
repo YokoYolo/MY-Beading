@@ -40,5 +40,16 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
+  "bin": {
+    "miss-yoko-beading": "seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YokoYolo/MY-Beading.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YokoYolo/MY-Beading/issues"
+  },
+  "homepage": "https://github.com/YokoYolo/MY-Beading#readme",
   "description": ""
 }

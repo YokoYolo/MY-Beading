@@ -1,1 +1,29 @@
-cdcf
+<div class="indexpage">
+<div class="pad">
+<div class="indexcont container">
+
+<div><h1>{{post.title}}
+</h1> Edite by {{theUser.username}}</div>
+
+
+
+<form class="form2" action="/stories/{{post.id}}/update" method="post">
+
+    <label for="title"> New name for you Story</label>
+    <input class="leftfl" for="title" name="title" value="{{post.title}}"><br>
+    <label for="content"> What do you have to say?</label>
+    <br>
+    <textarea class="leftfl" id="content" name="content" cols="30" rows="10">{{post.content}}</textarea>
+    <br><br><br><br><br><br>
+    <br><br><br>
+    <br><br>
+
+    <button class="spec"  type="submit">Submit</button>
+</form>
+
+
+
+</br>
+</div>
+</div>
+</div>

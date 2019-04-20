@@ -8,12 +8,12 @@ const postSchema = new Schema({
   image: String, 
   shortdescription: String,
   date: String,
-  reviews:[{title: String, content: String, reviewer:{type: Schema.Types.ObjectId, ref: 'User' }, date: Date  }]
-,},
-  {timestamps: true}, 
+  reviews:[{title: String, content: String, reviewer: {type: Schema.Types.ObjectId, ref: 'User' }, date: Date  }]
+  },
+  {timestamps: true} 
 );
-const Post = mongoose.model("Post", postSchema);
 
+const Post = mongoose.model("Post", postSchema);
 
 
 module.exports = Post;
